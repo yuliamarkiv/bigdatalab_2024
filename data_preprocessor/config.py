@@ -1,5 +1,4 @@
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, TimestampType
-
 source_schema = StructType([
     StructField('trip_id', StringType(), True),
     StructField('taxi_id', StringType(), True),
@@ -29,3 +28,5 @@ source_schema = StructType([
 
 nulls_columns = ["pickup_census_tract", "dropoff_census_tract"]
 points_columns = ["pickup_centroid_location", "dropoff_centroid_location"]
+input_directory = "raw_data"
+output_directory = "data"
